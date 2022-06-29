@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: myappService
+spec:
+  selector:
+    app: mavenwebapp
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 8080
+
